@@ -1,6 +1,7 @@
 require("dotenv").config(); //* Para decirle a la aplicacion que utilice las variables de entorno
 const express = require("express");
 const cors = require("cors");
+const dbConnect = require("./config/mongo.js");
 const app = express();
 
 app.use(cors()); //*Para evitar el error de origen cruzado. Por el momento todos los clientes se pueden conectar
@@ -11,3 +12,5 @@ app.listen(port, () => {
     console.log(`Servidor en línea http://localhost:${port}`);
 
 });
+
+dbConnect();
