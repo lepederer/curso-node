@@ -8,6 +8,14 @@ app.use(cors()); //*Para evitar el error de origen cruzado. Por el momento todos
 
 const port = process.env.PORT || 3001; //*Esta linea depede require("dotenv").config(). En caso de que vaya a fallar se usa el puerto 3001
 
+//* Aquí se cargarán nuestras rutas
+//* http://localhost:3000/api/"nombredelaruta"
+// app.use("/api", (req, res) => {
+//     res.send({saludo: 'Hola, ruta accedida'}); 
+// });
+app.use("/api", require("./routes"));
+
+//*Pasamos como primer argumento el puerto y luego una función
 app.listen(port, () => {
     console.log(`Servidor en línea http://localhost:${port}`);
 
