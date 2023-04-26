@@ -5,7 +5,7 @@ const dbConnect = require("./config/mongo.js");
 const app = express();
 
 app.use(cors()); //*Para evitar el error de origen cruzado. Por el momento todos los clientes se pueden conectar
-
+app.use(express.json()); //* Con esto le indicamos a nuestro backend que reciba información en el método post
 const port = process.env.PORT || 3001; //*Esta linea depede require("dotenv").config(). En caso de que vaya a fallar se usa el puerto 3001
 
 //* Aquí se cargarán nuestras rutas

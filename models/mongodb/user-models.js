@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const UserScheme = new mongoose.Schema(
     {
         name: {
-            type: String
+            type: String,
         },
         email: {
             type: String,
-            unique: true //email will be unique
+            unique: true, //email will be unique
         },
         telefono: {
             type: Number
@@ -18,7 +18,7 @@ const UserScheme = new mongoose.Schema(
     },
     {
         timestamps: true, //fecha en se creó ese usuario
-        versionkey: false 
+        versionkey: false, 
     }
 );
 

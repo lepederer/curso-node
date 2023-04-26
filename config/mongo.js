@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 //*Código extraído desde internet porque el original arroja error de conexión
-const mongoURI = "mongodb://127.0.0.1:27017/clientes"
+const mongoURI = "mongodb://127.0.0.1:27017/db_usuarios"
 
 const connectToMongo = async () => {
 try {
