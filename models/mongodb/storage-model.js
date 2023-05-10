@@ -9,7 +9,7 @@ const StorageScheme = new mongoose.Schema(
             type: String
         },
         mediaId: {
-            type: mongoose.Types.ObjectId, //*Debe ser del tipo de una ID de mongo
+            type: mongoose.Types.ObjectId, //*Debe ser del tipo de un ID de mongo
         }
     },
     {
